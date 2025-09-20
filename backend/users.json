@@ -45,5 +45,12 @@
     "email": "aaaa@mmm.com",
     "password": "$2b$10$rBPJ9ogx8l4FFHCBmOghtuhs2nu3wbCMgdENSf8lmOtD1YVgtbuPy",
     "createdAt": "2025-09-20T10:41:40.522Z"
+  },
+  {
+    "id": "u1758367789702",
+    "username": "aaaaaaa",
+    "email": "aaaaaaaaa@nm.com",
+    "password": "$2b$10$XOOK1oVYRiqEuglTm0kDJuSm4/j9rYGzF/uWW/ZD1g0x1kQvLVvAy",
+    "createdAt": "2025-09-20T11:29:49.702Z"
   }
 ]
