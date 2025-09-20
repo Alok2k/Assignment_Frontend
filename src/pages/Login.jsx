@@ -27,9 +27,9 @@ export default function Login() {
 
       let res;
       if (mode === "login") {
-        res = await axios.post("SERVER_API_URL/login", { username, password });
+        res = await axios.post(`${process.env.REACT_APP_API_URL}/login`, { username, password });
       } else {
-        res = await axios.post("SERVER_API_URL/signup", { username, email, password });
+        res = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, { username, email, password });
       }
 
       const user = res.data.user;
