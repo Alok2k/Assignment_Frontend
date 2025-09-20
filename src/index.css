@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-gray-50 }
+
+.loader { @apply animate-spin border-4 border-green-500 border-t-transparent rounded-full w-8 h-8 }
