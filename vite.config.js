@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
+    port: 5173,  // Frontend port
     proxy: {
       '/api': {
         target: 'https://catalog-management-system-dev-ak3ogf6zea-uc.a.run.app',

@@ -56,7 +56,7 @@ function AddToCartButton({ item }){
   const add = async ()=>{
     if(!user){ alert('Please login'); return }
     try{
-      await fetch('http://localhost:6446/cart/'+user.id, {
+      await fetch('SERVER_API_URL/cart/'+user.id, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: item.id, name: item.name, price: item.price, qty: 1, image: item.image })
       })
