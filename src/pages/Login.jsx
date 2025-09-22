@@ -1,8 +1,8 @@
 
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import AppContext from "../context/AppContext";
+import api from "../api"; 
 
 
 export default function Login() {
@@ -14,17 +14,6 @@ export default function Login() {
   const [error, setError] = useState("");
   const { setUser } = useContext(AppContext);
   const nav = useNavigate();
-  const apiUrl = import.meta.env.REACT_APP_API_URL;// In frontend/src/api.js
-  import axios from 'axios';
-  
-  // Create an Axios instance
-  const api = axios.create({
-    
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:6446'
-  });
-  
-  export default api;
-  
 
   const handleSubmit = async () => {
     setLoading(true);
@@ -39,9 +28,9 @@ export default function Login() {
 
       let res;
       if (mode === "login") {
-        res = await axios.post(`${apiUrl}/login`, { username, password });
+        res = await api.post("/login", { username, password });
       } else {
-        res = await axios.post(`${apiUrl}/signup`, { username, email, password });
+        res = await api.post("/signup", { username, email, password });
       }
 
       const user = res.data.user;
